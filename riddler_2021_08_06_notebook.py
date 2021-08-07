@@ -1,7 +1,3 @@
-
-# https://fivethirtyeight.com/features/can-you-zoom-around-the-race-track/
-# Just having fun some here plotting valid sequences!
-
 import random
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
@@ -58,11 +54,21 @@ def new_coords(x,y,prev_x,prev_y,prev_coords):
         return [new_coords[0], new_coords[1], prev_x, prev_y]
 
 def generate_seq():
+    """
     x = 0
     y = -5
     prev_x = 0
     prev_y = -5
-    prev_coords = [[0,-5]]
+    prev_coords = [[0,-5],[1,-4],[3,-2]]
+    """
+
+
+    x = 4
+    y = 0
+    prev_x = 3
+    prev_y = -2
+    prev_coords = [[0,-5],[1,-4],[3,-2],[0,4]]
+
 
     while True:
         if (result := new_coords(x,y,prev_x,prev_y,prev_coords)) is not None:
@@ -78,10 +84,10 @@ def generate_seq():
 # Temporary stopping function
 while True:
     s = generate_seq()
-    if s[-1] == [0,-5] and len(s) < 20:
+    if s[-1] == [0,-5] and len(s) < 14:
         break
 
-print(len(s))
+print(len(s) - 1)
 
 xs, ys = zip(*s)
 
@@ -92,9 +98,7 @@ ax.yaxis.set_major_locator(MultipleLocator(1))
 ax.set_xticklabels([])
 ax.set_yticklabels([])
 ax.grid(which='both',color='#CCCCCC', linestyle='--')
-fig.set_size_inches(18.5, 10.5)
-
-# Or if you want different settings for the grids:
+fig.set_size_inches(10, 10)
 
 # Embellishments
 circle1 = plt.Circle((0, 0), 3, color='black')
