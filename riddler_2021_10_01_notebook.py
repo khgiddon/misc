@@ -94,8 +94,7 @@ all_permutations = [[{1,2},{3,4}],
 queue = [[[{1, 2}, {3, 4}], [{1, 3}, {2, 4}]]]
 
 # Run from shortest sequences and get longer, until solution is found
-max_length = 100000000
-while len(queue) < max_length:
+while True:
     s = queue[0]
 
     # Length has to be multiple of 6 - to speed up computation?
@@ -113,5 +112,4 @@ while len(queue) < max_length:
 
 """
 Success: [[{1, 2}, {3, 4}], [{1, 3}, {2, 4}], [{1, 2}, {3, 4}], [{1, 4}, {2, 3}], [{3, 4}, {1, 2}], [{1, 3}, {2, 4}], [{3, 4}, {1, 2}], [{2, 3}, {1, 4}], [{2, 4}, {1, 3}], [{1, 4}, {2, 3}], [{2, 4}, {1, 3}], [{2, 3}, {1, 4}]]
-(length of 12)
 """
