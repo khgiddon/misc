@@ -132,3 +132,5 @@ dmypy.json
 .DS_Store
 .idea/
 simmons/simmons.md
+book_vocabulary/web_test/assets/parsed_books_popular.csv
+book_vocabulary/web_test/assets/parsed_books.csv
