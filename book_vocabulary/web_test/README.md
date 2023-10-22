@@ -1,0 +1,3 @@
+The Python script at [create_record_from_popular.py](create_record_from_popular.py) will generate **assets/parsed_books.csv** which is used to create the graph in [create_record_from_popular.py](graph.ipnyb). The CSV is too large to upload.
+
+There is another script [create_record_from_catalog.py](create_record_from_catalog.py) which uses the Project Gutenberg catalog to create the CSV. This is not used in the final version.
