@@ -3,3 +3,5 @@ app.py
 __pycache__/
 .ipynb_checkpoints/
 .venv
+assets/parsed_books_popular.csv
+assets/parsed_books.csv
