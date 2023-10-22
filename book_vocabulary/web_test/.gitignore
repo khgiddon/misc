@@ -5,3 +5,4 @@ __pycache__/
 .venv
 assets/parsed_books_popular.csv
 assets/parsed_books.csv
+assets/pg_catalog.csv
